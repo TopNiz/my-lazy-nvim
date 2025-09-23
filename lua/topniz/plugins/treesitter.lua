@@ -20,22 +20,23 @@ return {
                 enable = true,
             },
             ensure_installed = {
-                "json",
-                "javascript",
-                "typescript",
-                "tsx",
-                "yaml",
-                "html",
-                "css",
-                "markdown",
-                "markdown_inline",
                 "bash",
-                "lua",
-                "vim",
+                "c",
+                "css",
                 "dockerfile",
                 "gitignore",
-                "c",
+                "glimmer",
+                "html",
+                "javascript",
+                "json",
+                "lua",
+                "markdown",
+                "markdown_inline",
                 "rust",
+                "tsx",
+                "typescript",
+                "vim",
+                "yaml",
             },
             incremental_selection = {
                 enable = true,
@@ -48,7 +49,7 @@ return {
             },
             rainbow = {
                 enable = true,
-                disable = { "html" },
+                -- disable = { "html" },
                 extended_mode = false,
                 max_file_lines = nil,
             },
@@ -57,5 +58,16 @@ return {
                 enable_autocmd = false,
             },
         })
+        
+        local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+        parser_config.glimmer = {
+            filetype = "hbs",
+            used_by = {
+              "handlebars",
+              "html.handlebars",
+              "mustache",
+              "html.mustache",
+            }
+        }
     end,
 }

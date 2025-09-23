@@ -3,6 +3,10 @@
 local global = vim.g
 local o = vim.opt
 
+-- Global options
+
+global.python3_host_prog = "/Users/nizarayed/.pyenv/shims/python3"
+
 -- Editor options
 
 o.number = true -- Print the line number in front of each line
