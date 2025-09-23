@@ -12,7 +12,7 @@ return {
         -- accept = false, -- handled by nvim-cmp / blink.cmp
         accept = "<TAB>",
         next = "<M-n>",
-        prev = "<M-n>",
+        prev = "<M-p>",
       },
     },
     panel = { enabled = false },
